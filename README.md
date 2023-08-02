@@ -31,6 +31,46 @@ return 0;
 <br>
 
 # 제네릭 프로그래밍 활용 예제
+```cpp
+#include<iostream>
+using namespace std;
+
+class Circle {
+	int radius;//private
+public:
+	Circle(int radius = 1) {
+		this->radius = radius;
+	}
+	int getRadius() {
+		return radius;
+	}
+};
+
+template<class T>
+void myswap(T& a, T& b) {
+	T tmp;
+	tmp = a;
+	a = b;
+	b = tmp;
+}
+
+void main() {
+	int a = 4, b = 5;
+	myswap(a, b);
+	cout << "a=" << a << "," << "b=" << b << endl;
+
+	double c = 4, d = 5;
+	myswap(c, d);
+	cout << "a=" << a << "," << "b=" << b << endl;
+	
+	Circle donut(5), pizza(20);
+	myswap(donut, pizza);
+	cout << "donut 반지름=" 
+    << donut.getRadius() << endl;
+	cout << "pizza반지름=" 
+    << pizza.getRadius() << endl;
+}
+```
 # 09장 메모리 모델과 이름 공간
 <br>
 
