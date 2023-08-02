@@ -1,5 +1,5 @@
 # 3Week
-# 코드 및 내용 정리중 (2023-07-27 13:39)
+
 # 함수 포인터 인자 / 반환값 활용 예제
 ```cpp
 int add(int a, int b){return a + b;}
@@ -95,8 +95,8 @@ void printData(int x) const {data_ = x; // 변경 가능}
 ```
 
 <br>**cv 제한자**
-<br>const
-<br>voladtile
+<br>volatile : 변수가 스레드에 의해 비동기적으로 변경될 수 있음을 알리기 위해 사용되는 제한자<br>
+이 제한자는 final 변수를 제외한 변수에 선언될 수 있다.
 
 <br>**함수와 링크**<br>
 <br>
